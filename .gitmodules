@@ -1,6 +1,8 @@
 [submodule "MobyDick"]
 	path = MobyDick
 	url = https://github.com/dogstar25/MobyDick_NEW.git
+	branch = 10102025/attempt-switch-to-CMAKE
 [submodule "BobbysBurden"]
 	path = BobbysBurden
 	url = https://github.com/dogstar25/BobbysBurden.git
+	branch = 10102025/attempt-switch-to-CMAKE
