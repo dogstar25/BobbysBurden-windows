@@ -1,0 +1,123 @@
+# ==========================================================
+# 🔧 Core Build System: CMake + vcpkg
+# ==========================================================
+
+# Build output directories
+/build/
+/out/
+/x64/
+/bin/
+/lib/
+/Debug/
+/Release/
+
+# vcpkg installed libraries (local build artifacts)
+vcpkg_installed/
+.vcpkg-root
+*.vcpkg-lock.json
+
+# ==========================================================
+# 🧱 IDEs (Visual Studio, VS Code, CLion, Xcode, etc.)
+# ==========================================================
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains CLion / Rider
+.idea/
+
+# Xcode
+*.xcworkspace/
+*.xcodeproj/
+DerivedData/
+
+# ==========================================================
+# 🧰 Compiled and Intermediate Files
+# ==========================================================
+*.obj
+*.o
+*.lo
+*.la
+*.al
+*.slo
+*.ilk
+*.pdb
+*.idb
+*.dll
+*.exe
+*.so
+*.dylib
+*.a
+*.lib
+*.exp
+
+# Precompiled headers
+*.pch
+*.gch
+
+# CMake temporary and cache files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+
+# Ninja build system
+.ninja_deps
+.ninja_log
+rules.ninja
+build.ninja
+
+# ==========================================================
+# 🧠 Project Editor / Tool Artifacts
+# ==========================================================
+*.aps         # Old Visual Studio resource cache
+*.user
+*.suo
+*.userprefs
+*.tmp
+*.log
+*.tlog
+*.cache
+*.swp
+*~
+
+# ==========================================================
+# 🧬 Language-specific
+# ==========================================================
+# Python cache
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+
+# ==========================================================
+# 🧩 Other
+# ==========================================================
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==========================================================
+# ✅ Keep important config and sources
+# ==========================================================
+# Do not ignore these
+!CMakeLists.txt
+!vcpkg.json
+!*.cpp
+!*.h
+!*.hpp
+!*.inl
+!*.cmake
+!README.md
+!LICENSE
