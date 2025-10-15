@@ -6,10 +6,10 @@
     },
     "configurePresets": [
         {
-            "name": "windows-debug",
-            "displayName": "Windows Debug (with vcpkg manifest)",
+            "name": "windows-debug-ninja",
+            "displayName": "Windows Debug (Ninja + vcpkg)",
             "generator": "Ninja",
-            "binaryDir": "build/debug",
+            "binaryDir": "build/ninja-debug",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_TOOLCHAIN_FILE": "C:/projects/vcpkg/scripts/buildsystems/vcpkg.cmake",
@@ -18,16 +18,47 @@
             }
         },
         {
-            "name": "windows-release",
-            "displayName": "Windows Release (with vcpkg manifest)",
+            "name": "windows-release-ninja",
+            "displayName": "Windows Release (Ninja + vcpkg)",
             "generator": "Ninja",
-            "binaryDir": "build/release",
+            "binaryDir": "build/ninja-release",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_TOOLCHAIN_FILE": "C:/projects/vcpkg/scripts/buildsystems/vcpkg.cmake",
                 "VCPKG_MANIFEST_DIR": "${sourceDir}/MobyDick",
                 "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed"
             }
+        },
+        {
+            "name": "windows-debug-msbuild",
+            "displayName": "Windows Debug (MSBuild + Profiler)",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "build/msvc-debug",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "C:/projects/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_MANIFEST_DIR": "${sourceDir}/MobyDick",
+                "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed"
+            }
+        }
+    ],
+
+    "buildPresets": [
+        {
+            "name": "windows-debug-ninja",
+            "configurePreset": "windows-debug-ninja",
+            "description": "Build Debug configuration using Ninja",
+            "jobs": 12
+        },
+        {
+            "name": "windows-release-ninja",
+            "configurePreset": "windows-release-ninja",
+            "description": "Build Release configuration using Ninja",
+            "jobs": 12
+        },
+        {
+            "name": "windows-debug-msbuild",
+            "configurePreset": "windows-debug-msbuild",
+            "description": "Build Debug configuration using Visual Studio MSBuild"
         }
     ]
 }
