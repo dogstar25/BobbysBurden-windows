@@ -17,13 +17,14 @@
 #include <wtypes.h>
 #include "EnvironmentEvents/BBEnvironmentEventFactory.h"
 
-std::unique_ptr<Game> game;
+static std::unique_ptr<Game> gameOwner;
 
 //int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char*, int nShowCmd)
 int main(int argc, char* argv[])
 {
 
-	game = std::make_unique<BBGame>();
+	gameOwner = std::make_unique<BBGame>();
+	game = gameOwner.get();
 
 	std::cout << "Bobby's Ghost Adventure Begins\n";
 
