@@ -1,8 +1,8 @@
 [submodule "MobyDick"]
 	path = MobyDick
 	url = https://github.com/dogstar25/MobyDick_NEW.git
-	branch = feature/md-crossplatform-filesystem
+	branch = feature/md-screen-resolution
 [submodule "BobbysBurden"]
 	path = BobbysBurden
 	url = https://github.com/dogstar25/BobbysBurden.git
-	branch = feature/bb-crossplatform-filesystem
+	branch = feature/bb-screen-resolution
