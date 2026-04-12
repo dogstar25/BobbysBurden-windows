@@ -29,7 +29,8 @@ int main(int argc, char* argv[])
 	std::cout << "Bobby's Ghost Adventure Begins\n";
 
 	game->init(
-		std::make_shared<BBContactHandler>(), 
+		std::make_shared<SoundManager>(), 
+		std::make_shared<BBContactHandler>(),
 		std::make_shared<BBContactFilter>(),
 		std::make_shared<BBComponentFactory>(),
 		std::make_shared<BBActionFactory>(),
